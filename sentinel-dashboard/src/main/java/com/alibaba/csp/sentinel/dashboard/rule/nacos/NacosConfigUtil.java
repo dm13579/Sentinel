@@ -13,20 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.alibaba.csp.sentinel.dashboard.rule;
+package com.alibaba.csp.sentinel.dashboard.rule.nacos;
 
 /**
  * @author Eric Zhao
  * @since 1.4.0
  */
-public interface DynamicRuleProvider<T> {
+public final class NacosConfigUtil {
+    // 流控
+    public static final String FLOW_DATA_ID_POSTFIX = "-sentinel-flow";
+    // 降级
+    public static final String DEGRADE_DATA_ID_POSTFIX = "-sentinel-degrade";
+    // 系统
+    public static final String SYSTEM_DATA_ID_POSTFIX = "-sentinel-system";
+    // 授权
+    public static final String AUTHORITY_DATA_ID_POSTFIX = "-sentinel-authority";
+    // 热点参数
+    public static final String PARAM_FLOW_DATA_ID_POSTFIX = "-sentinel-param";
 
-    default T getRules(String appName) throws Exception {
-        return null;
+    private NacosConfigUtil() {
     }
-
-    default T getRules(String appName, String ip, Integer port) throws Exception {
-        return null;
-    }
-
 }

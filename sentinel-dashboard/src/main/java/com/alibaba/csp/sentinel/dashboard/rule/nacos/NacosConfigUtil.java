@@ -31,6 +31,11 @@ public final class NacosConfigUtil {
     // 热点参数
     public static final String PARAM_FLOW_DATA_ID_POSTFIX = "-sentinel-param";
 
+    public static final String GATEWAY_API_DATA_ID_POSTFIX = "-sentinel-param";
+    public static final String GATEWAY_FLOW_DATA_ID_POSTFIX = "-sentinel-param";
+
+
+
     private NacosConfigUtil() {
     }
 }
